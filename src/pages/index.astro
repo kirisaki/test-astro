@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Greeting from "../components/Greeting";
 ---
 
 <Layout pageTitle="index">
-    <Header />
+    <Greeting
+        client:load
+        messages={["どうも", "こんにちは", "初めまして", "ようこそ"]}
+    />
 </Layout>
